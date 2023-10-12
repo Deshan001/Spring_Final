@@ -1,0 +1,27 @@
+
+//////////////////////// GUIDE MICRO SERVICE/////////////////////////
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = JSON.stringify({
+  "id": 1,
+  "name": "john_doe",
+  "address": "password",
+  "birthday": "1990-01-01",
+  "contact": "555-555-5555",
+  "mdv": "245",
+  "experience": "good",
+  "remarks": "Some remarks here"
+});
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("localhost:8081/api/v1/guide", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));

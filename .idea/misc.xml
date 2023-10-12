@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/GuideMicroService" />
+    <file type="web" url="file://$PROJECT_DIR$/HotelMicroService" />
+    <file type="web" url="file://$PROJECT_DIR$/User Micro Service" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/User Micro Service/pom.xml" />
+        <option value="$PROJECT_DIR$/GuideMicroService/pom.xml" />
+        <option value="$PROJECT_DIR$/HotelMicroService/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>
