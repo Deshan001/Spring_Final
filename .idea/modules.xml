@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/GuideMicroService/GuideMicroService.iml" filepath="$PROJECT_DIR$/GuideMicroService/GuideMicroService.iml" />
       <module fileurl="file://$PROJECT_DIR$/HotelMicroService/HotelMicroService.iml" filepath="$PROJECT_DIR$/HotelMicroService/HotelMicroService.iml" />
       <module fileurl="file://$PROJECT_DIR$/User Micro Service/User Micro Service.iml" filepath="$PROJECT_DIR$/User Micro Service/User Micro Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VehicalMicroService/VehicalMicroService.iml" filepath="$PROJECT_DIR$/VehicalMicroService/VehicalMicroService.iml" />
     </modules>
   </component>
 </project>
