@@ -1,0 +1,28 @@
+
+///////////////////HOTEL MICRO SERVICE//////////////////////////////
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = JSON.stringify({
+  "id": 1,
+  "name": "john_doe",
+  "address": "password",
+  "remarks": "Some remarks here",
+  "email": "hello@gmail.com",
+  "category": "medium",
+  "contact": "555-555-5555",
+  "maplink": "hello",
+  "pets": "y"
+});
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("localhost:8083/api/v1/hotel", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));

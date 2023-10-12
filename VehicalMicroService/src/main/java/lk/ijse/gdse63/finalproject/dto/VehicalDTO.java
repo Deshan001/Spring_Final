@@ -17,7 +17,7 @@ public class VehicalDTO {
         private String seatCapasity;
         private String fuelType;
         private Double feeForDay;
-        private Double duelUsage;
+        private Double fuelUsage;
         private Double feeFor1km ;
         private Boolean hybrid ;
         private String remarks;
