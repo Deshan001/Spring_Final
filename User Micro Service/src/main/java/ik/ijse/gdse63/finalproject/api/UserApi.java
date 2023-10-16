@@ -1,18 +1,15 @@
-package lk.ijse.gdse63.nexttravel.api;
+package ik.ijse.gdse63.finalproject.api;
 
-import ik.ijse.gdse63.finalproject.config.JwtUtil;
+import ik.ijse.gdse63.finalproject.exeption.UpdateFailException;
+import lk.ijse.gdse63.finalproject.config.JwtUtil;
 import ik.ijse.gdse63.finalproject.dto.UserDTO;
 import ik.ijse.gdse63.finalproject.dto.security.ErrorResponse;
 import ik.ijse.gdse63.finalproject.dto.security.LoginRequest;
 import ik.ijse.gdse63.finalproject.dto.security.LoginResponse;
+import ik.ijse.gdse63.finalproject.exeption.CreateFailException;
+import ik.ijse.gdse63.finalproject.exeption.DeleteFailException;
+import ik.ijse.gdse63.finalproject.exeption.UserNotFoundException;
 import ik.ijse.gdse63.finalproject.service.UserService;
-/*import lk.ijse.gdse63.nexttravel.config.JwtUtil;
-import lk.ijse.gdse63.nexttravel.dto.UserDTO;
-import lk.ijse.gdse63.nexttravel.dto.security.ErrorResponse;
-import lk.ijse.gdse63.nexttravel.dto.security.LoginRequest;
-import lk.ijse.gdse63.nexttravel.dto.security.LoginResponse;
-import lk.ijse.gdse63.nexttravel.exception.UserNotFoundException;
-import lk.ijse.gdse63.nexttravel.service.UserService;*/
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -81,7 +78,7 @@ public class UserApi {
                                        @RequestPart(value = "nicRear")byte[] nicRear,
                                        @RequestPart(value = "gender")String gender,
                                        @RequestPart(value = "nicNo")String nicNo
-                                       ){
+    ){
         try {
             UserDTO userDTO = new UserDTO();
             userDTO.setUsername(userName);
@@ -90,9 +87,10 @@ public class UserApi {
             userDTO.setEmail(email);
             userDTO.setUsernic(nicNo);
             //userDTO.setBirthday(birthday);
-            userDTO.setNicNicFrontByte(nicFont);
+            userDTO.setGender(gender);
+            userDTO.setNicFrontByte(nicFont);
             userDTO.setNicRearByte(nicRear);
-            userDTO.setProfilePicByte(profilePic);
+            userDTO.setProfilePicByte(prfilePic);
 
             int id = userService.addUsers(userDTO);
             userDTO.setId(id);
@@ -107,7 +105,7 @@ public class UserApi {
         try {
             userService.updateUser(userDTO);
             return new ResponseEntity<>(userDTO,HttpStatus.OK);
-        }catch (UpdateException e){
+        }catch (UpdateFailException e){
             return  new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
@@ -122,5 +120,6 @@ public class UserApi {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
+
 
 }

@@ -1,9 +1,6 @@
 package ik.ijse.gdse63.finalproject.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,15 +20,21 @@ public class User {
 
     private String password;
 
+    @Column(unique = true)
     private String usernic;
 
     private String contact;
 
+    @Column(unique = true)
     private String email;
 
     private Date birthday;
 
-    private String nicImgs;
+    private String nicFrontImg;
+
+    private String nicRearImg;
+
+    private String profilePic;
 
     private String gender;
 

@@ -7,6 +7,8 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
+import java.sql.Date;
+
 public interface UserRepo extends CrudRepository<User, Integer> {
 
     User findByEmail(String email);
@@ -26,7 +28,7 @@ public interface UserRepo extends CrudRepository<User, Integer> {
             String usernic,
             String contact,
             String email,
-            String birthday,
+            Date birthday,
             String gender,
             String remark
     );

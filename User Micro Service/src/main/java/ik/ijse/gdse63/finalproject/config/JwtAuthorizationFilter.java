@@ -1,13 +1,14 @@
-package lk.ijse.gdse63.finalProject.config;
+package ik.ijse.gdse63.finalproject.config;
+
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import ik.ijse.gdse63.finalproject.config.JwtUtil;
+import ik.ijse.gdse63.finalproject.service.UserService;
 import io.jsonwebtoken.Claims;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lk.ijse.gdse63.finalProject.dto.AdminDTO;
+import lk.ijse.gdse63.finalproject.config.JwtUtil;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -16,7 +17,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
-import org.springframework.web.reactive.function.client.WebClient;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -32,9 +32,12 @@ public class JwtAuthorizationFilter extends OncePerRequestFilter {
 
     private final ObjectMapper mapper;
 
-    public JwtAuthorizationFilter(JwtUtil jwtUtil , ObjectMapper mapper ){
+    private UserService service;
+
+    public JwtAuthorizationFilter(JwtUtil jwtUtil , ObjectMapper mapper, UserService service){
         this.jwtUtil = jwtUtil;
         this.mapper = mapper ;
+        this.service = service;
     }
 
 
@@ -82,4 +85,5 @@ public class JwtAuthorizationFilter extends OncePerRequestFilter {
 
         filterChain.doFilter(request,response);
     }
+
 }

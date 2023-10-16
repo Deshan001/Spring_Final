@@ -16,6 +16,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+
     @Autowired
     private JwtAuthorizationFilter jwtAuthorizationFilter;
 
@@ -33,7 +34,6 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http)throws Exception{
-
         http.csrf().disable()
                 .authorizeRequests()
                 .requestMatchers("/api/v1/user/login").permitAll()
