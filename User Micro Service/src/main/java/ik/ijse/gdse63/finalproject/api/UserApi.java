@@ -6,13 +6,13 @@ import ik.ijse.gdse63.finalproject.dto.security.ErrorResponse;
 import ik.ijse.gdse63.finalproject.dto.security.LoginRequest;
 import ik.ijse.gdse63.finalproject.dto.security.LoginResponse;
 import ik.ijse.gdse63.finalproject.service.UserService;
-import lk.ijse.gdse63.nexttravel.config.JwtUtil;
+/*import lk.ijse.gdse63.nexttravel.config.JwtUtil;
 import lk.ijse.gdse63.nexttravel.dto.UserDTO;
 import lk.ijse.gdse63.nexttravel.dto.security.ErrorResponse;
 import lk.ijse.gdse63.nexttravel.dto.security.LoginRequest;
 import lk.ijse.gdse63.nexttravel.dto.security.LoginResponse;
 import lk.ijse.gdse63.nexttravel.exception.UserNotFoundException;
-import lk.ijse.gdse63.nexttravel.service.UserService;
+import lk.ijse.gdse63.nexttravel.service.UserService;*/
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

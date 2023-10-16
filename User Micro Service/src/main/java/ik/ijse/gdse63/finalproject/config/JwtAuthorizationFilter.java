@@ -1,4 +1,4 @@
-package lk.ijse.gdse63.nexttravel.config;
+package lk.ijse.gdse63.finalProject.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ik.ijse.gdse63.finalproject.config.JwtUtil;
@@ -7,7 +7,7 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lk.ijse.gdse63.nexttravel.dto.AdminDTO;
+import lk.ijse.gdse63.finalProject.dto.AdminDTO;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
