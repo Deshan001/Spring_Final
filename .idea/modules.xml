@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AuthenticationMicroService/AuthenticationMicroService.iml" filepath="$PROJECT_DIR$/AuthenticationMicroService/AuthenticationMicroService.iml" />
       <module fileurl="file://$PROJECT_DIR$/GuideMicroService/GuideMicroService.iml" filepath="$PROJECT_DIR$/GuideMicroService/GuideMicroService.iml" />
       <module fileurl="file://$PROJECT_DIR$/HotelMicroService/HotelMicroService.iml" filepath="$PROJECT_DIR$/HotelMicroService/HotelMicroService.iml" />
       <module fileurl="file://$PROJECT_DIR$/User Micro Service/User Micro Service.iml" filepath="$PROJECT_DIR$/User Micro Service/User Micro Service.iml" />
