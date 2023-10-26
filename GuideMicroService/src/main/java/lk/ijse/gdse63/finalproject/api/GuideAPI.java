@@ -2,6 +2,10 @@ package lk.ijse.gdse63.finalproject.api;
 
 
 import lk.ijse.gdse63.finalproject.dto.GuideDTO;
+import lk.ijse.gdse63.finalproject.exception.SaveFailException;
+import lk.ijse.gdse63.finalproject.exception.SearchFailException;
+import lk.ijse.gdse63.finalproject.exception.UpdateFailException;
+import lk.ijse.gdse63.finalproject.service.GuideService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,9 +16,9 @@ import java.time.LocalDate;
 @RequestMapping("/api/v1/guide")
 public class GuideAPI {
 
-    GuidService service;
+    GuideService service;
 
-    public GuideAPI(GuidService service) {
+    public GuideAPI(GuideService service) {
         this.service = service;
     }
 
