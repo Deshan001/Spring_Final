@@ -9,7 +9,7 @@
         <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
-    <root id="archive" name="HotelMicroService-0.0.1-SNAPSHOT.war">
+    <root id="archive" name="hotel_micro_service-0.0.1-SNAPSHOT.war">
       <element id="artifact" artifact-name="HotelMicroService:war exploded" />
     </root>
   </artifact>
