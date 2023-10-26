@@ -9,7 +9,7 @@
         <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
-    <root id="archive" name="GuideMicroService-0.0.1-SNAPSHOT.war">
+    <root id="archive" name="guide_micro_service-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="GuideMicroService:war exploded" />
     </root>
   </artifact>
