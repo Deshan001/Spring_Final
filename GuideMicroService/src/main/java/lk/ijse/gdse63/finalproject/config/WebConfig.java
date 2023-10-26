@@ -1,8 +1,8 @@
 package lk.ijse.gdse63.finalproject.config;
 
 
+import lk.ijse.gdse63.finalproject.util.StringToLocalDateConverter;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.convert.Jsr310Converters;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -11,6 +11,6 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addFormatters(FormatterRegistry registry) {
-        registry.addConverter(new Jsr310Converters.StringToLocalDateConverter());
+        registry.addConverter(new StringToLocalDateConverter());
     }
 }
