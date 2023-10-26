@@ -1,4 +1,5 @@
-package lk.ijse.gdse63.finalproject.config;
+package ik.ijse.gdse63.finalproject.config;
+
 
 import ik.ijse.gdse63.finalproject.dto.UserDTO;
 import io.jsonwebtoken.*;
@@ -85,4 +86,5 @@ public class JwtUtil {
                 .signWith(SignatureAlgorithm.HS256,secret_key)
                 .compact();
     }
+
 }

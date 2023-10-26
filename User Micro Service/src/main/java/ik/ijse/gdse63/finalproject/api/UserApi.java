@@ -1,7 +1,7 @@
 package ik.ijse.gdse63.finalproject.api;
 
+import ik.ijse.gdse63.finalproject.config.JwtUtil;
 import ik.ijse.gdse63.finalproject.exeption.UpdateFailException;
-import lk.ijse.gdse63.finalproject.config.JwtUtil;
 import ik.ijse.gdse63.finalproject.dto.UserDTO;
 import ik.ijse.gdse63.finalproject.dto.security.ErrorResponse;
 import ik.ijse.gdse63.finalproject.dto.security.LoginRequest;
