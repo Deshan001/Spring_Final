@@ -5,16 +5,21 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 public class GuideDTO {
     private int id;
     private String name;
     private String address;
-    private LocalDate birthday;
     private String contact;
-    private String mdv;
+    private LocalDate birthDate;
+    private double manDayValue;
     private String experience;
-    private String remarks;
+    private byte[] guideIdFront;
+    private byte[] guideIdRear;
+    private byte[] nicFront;
+    private byte[] nicRear;
+    private byte[] profilePic;
 }
+
