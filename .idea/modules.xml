@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/HotelMicroService/HotelMicroService.iml" filepath="$PROJECT_DIR$/HotelMicroService/HotelMicroService.iml" />
       <module fileurl="file://$PROJECT_DIR$/TravelPackageMicroService/TravelPackageMicroService.iml" filepath="$PROJECT_DIR$/TravelPackageMicroService/TravelPackageMicroService.iml" />
       <module fileurl="file://$PROJECT_DIR$/User Micro Service/User Micro Service.iml" filepath="$PROJECT_DIR$/User Micro Service/User Micro Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UserTravelPackageMicroService/UserTravelPackageMicroService.iml" filepath="$PROJECT_DIR$/UserTravelPackageMicroService/UserTravelPackageMicroService.iml" />
       <module fileurl="file://$PROJECT_DIR$/VehicalMicroService/VehicalMicroService.iml" filepath="$PROJECT_DIR$/VehicalMicroService/VehicalMicroService.iml" />
     </modules>
   </component>
