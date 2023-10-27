@@ -1,13 +1,13 @@
 package lk.ijse.gdse63.usertravelpackagemicroservice.service.impl;
 
-import lk.ijse.gdse63.spring_final.user_travel_package_micro_service.dto.UserTravelPackageDTO;
-import lk.ijse.gdse63.spring_final.user_travel_package_micro_service.entity.Hotel;
-import lk.ijse.gdse63.spring_final.user_travel_package_micro_service.entity.Place;
-import lk.ijse.gdse63.spring_final.user_travel_package_micro_service.entity.UserTravelPackage;
-import lk.ijse.gdse63.spring_final.user_travel_package_micro_service.entity.Vehicle;
-import lk.ijse.gdse63.spring_final.user_travel_package_micro_service.exception.SaveFailException;
-import lk.ijse.gdse63.spring_final.user_travel_package_micro_service.repo.UserTravelPackageRepo;
-import lk.ijse.gdse63.spring_final.user_travel_package_micro_service.service.UserTravelPackageService;
+import lk.ijse.gdse63.usertravelpackagemicroservice.dto.UserTravelPackageDTO;
+import lk.ijse.gdse63.usertravelpackagemicroservice.entity.Hotel;
+import lk.ijse.gdse63.usertravelpackagemicroservice.entity.Place;
+import lk.ijse.gdse63.usertravelpackagemicroservice.entity.UserTravelPackage;
+import lk.ijse.gdse63.usertravelpackagemicroservice.entity.Vehicle;
+import lk.ijse.gdse63.usertravelpackagemicroservice.exception.SaveFailException;
+import lk.ijse.gdse63.usertravelpackagemicroservice.repo.UserTravelPackageRepo;
+import lk.ijse.gdse63.usertravelpackagemicroservice.service.UserTravelPackageService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
