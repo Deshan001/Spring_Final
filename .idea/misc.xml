@@ -5,6 +5,7 @@
     <file type="web" url="file://$PROJECT_DIR$/demoAuthenticationMicroService" />
     <file type="web" url="file://$PROJECT_DIR$/GuideMicroService" />
     <file type="web" url="file://$PROJECT_DIR$/HotelMicroService" />
+    <file type="web" url="file://$PROJECT_DIR$/TravelPackageMicroService" />
     <file type="web" url="file://$PROJECT_DIR$/User Micro Service" />
     <file type="web" url="file://$PROJECT_DIR$/VehicalMicroService" />
   </component>
@@ -16,6 +17,7 @@
         <option value="$PROJECT_DIR$/HotelMicroService/pom.xml" />
         <option value="$PROJECT_DIR$/VehicalMicroService/pom.xml" />
         <option value="$PROJECT_DIR$/AuthenticationMicroService/pom.xml" />
+        <option value="$PROJECT_DIR$/TravelPackageMicroService/pom.xml" />
       </list>
     </option>
   </component>
