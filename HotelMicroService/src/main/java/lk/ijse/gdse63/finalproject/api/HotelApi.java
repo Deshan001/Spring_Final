@@ -7,7 +7,6 @@ import lk.ijse.gdse63.finalproject.exception.NotFoundException;
 import lk.ijse.gdse63.finalproject.exception.SaveFailException;
 import lk.ijse.gdse63.finalproject.exception.UpdateFailException;
 import lk.ijse.gdse63.finalproject.service.HotelService;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/hotel")
+@CrossOrigin
 public class HotelApi {
 
     private HotelService hotelService;
@@ -32,7 +32,7 @@ public class HotelApi {
         try {
             HotelDTO search = hotelService.search(hotelId);
             return ResponseEntity.ok(search);
-        } catch (ChangeSetPersister.NotFoundException e) {
+        } catch (NotFoundException e) {
             return ResponseEntity.notFound().build();
         }
     }
@@ -40,7 +40,7 @@ public class HotelApi {
     @PostMapping()
     public ResponseEntity uploadFiles(@RequestParam("files") ArrayList<MultipartFile> files,
                                       @RequestParam("name") String name,
-                                      @RequestParam("category") String category,
+                                      @RequestParam(name = "category",required = false) String category,
                                       @RequestParam("petAllowed") boolean petAllowed,
                                       @RequestParam("mapLink") String mapLink,
                                       @RequestParam("address") String address,
