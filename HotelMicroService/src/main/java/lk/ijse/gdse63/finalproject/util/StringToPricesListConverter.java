@@ -1,25 +1,17 @@
 package lk.ijse.gdse63.finalproject.util;
 
 import com.google.gson.Gson;
-import lk.ijse.gdse63.finalproject.HotelMicroServiceApplication;
-import org.modelmapper.ModelMapper;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-@SpringBootApplication
-public class StringToPricesListConverter {
+import com.google.gson.reflect.TypeToken;
+import lk.ijse.gdse63.finalproject.dto.PricesDTO;
+import org.springframework.core.convert.converter.Converter;
+import java.util.ArrayList;
 
-    public static void main(String[] args) {
-        SpringApplication.run(HotelMicroServiceApplication.class, args);
+public class StringToPricesListConverter implements Converter<String, ArrayList<PricesDTO>> {
+
+    @Override
+    public ArrayList<PricesDTO> convert(String source) {
+        return new Gson().fromJson(source, new TypeToken<ArrayList<PricesDTO>>() {
+        });
     }
 
-    @Bean
-    public Gson getGson(){
-        return new Gson();
-    }
-    @Bean
-    public ModelMapper getModelMapper(){
-        return new ModelMapper();
-    }
 }
-
