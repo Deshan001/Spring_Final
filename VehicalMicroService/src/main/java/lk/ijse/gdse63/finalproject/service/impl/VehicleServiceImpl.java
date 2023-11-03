@@ -93,10 +93,13 @@ public class VehicleServiceImpl implements VehicleService {
 
     @Override
     public void updateVehicle(VehicleDTO dto) throws UpdateFailException {
+        System.out.println("Called :)");
         try {
             Vehicle vehicle = modelMapper.map(dto, Vehicle.class);
             Driver driver = modelMapper.map(dto.getDriverDTO(), Driver.class);
             Optional<Driver> byId = driverRepo.findById(driver.getId());
+            System.out.println(byId.isPresent());
+
             if (byId.isPresent()){
                 deleteImages(byId);
                 exportImages(dto,driver,vehicle);
@@ -221,7 +224,7 @@ public class VehicleServiceImpl implements VehicleService {
         vehicleDTO.setImages(new ArrayList<>());
         ArrayList<String> imageList = gson.fromJson(images, new TypeToken<ArrayList<String>>() {});
         for (int i = 0; i < imageList.size(); i++) {
-            BufferedImage r = ImageIO.read(new File(driver.getLicenseImageRear()));
+            BufferedImage r = ImageIO.read(new File(imageList.get(i)));
             ByteArrayOutputStream b = new ByteArrayOutputStream();
             ImageIO.write(r, "jpg", b);
             byte[] imgData= b.toByteArray();
